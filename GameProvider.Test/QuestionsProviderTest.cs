@@ -10,14 +10,14 @@ namespace GameProvider.Test
         [Fact]
         public void CanLoadQuestions()
         {
-            var Q = new Questions();
+            var Q = new Questions(QuestionLibrary.AllQuestionsTxt);
             var MyQ = Q.AllQuestions;
             Assert.True(MyQ.Count()>0, "Should be questions");
         }
         [Fact]
         public void AllLevelsPresents()
         {
-            var Q = new Questions();
+            var Q = new Questions(QuestionLibrary.AllQuestionsTxt);
             var MyQ = Q.AllQuestions;
             Assert.True(MyQ.Select(x=>x.level).Distinct().Count()==6, "6 levels should be pressent");
         }
