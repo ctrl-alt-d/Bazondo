@@ -6,9 +6,9 @@ namespace Blazondo.Questions
     public class Questions 
     {
 
-        public IEnumerable<Questions> AllQuestions => JsonConvert.DeserializeObject<IEnumerable<Questions>>(allQuestionsTxt);
-        public string AllQuestionsTxt { get => allQuestionsTxt; set => allQuestionsTxt = value; }
-        private string allQuestionsTxt = @"
+        public IEnumerable<Question> AllQuestions => JsonConvert.DeserializeObject<IEnumerable<Question>>(allQuestionsTxt);
+        public string AllQuestionsTxt { get => allQuestionsTxt; }
+        private string allQuestionsTxt = @"[
  { ""level"":""groc"", ""negre"":""si"", ""tecnica"":""are maki"", ""video"":""y3nUBMaMIgw"", ""alt"": """", ""picture"": ""are-makki"" },
  { ""level"":""groc"", ""negre"":""si"", ""tecnica"":""montong maki"", ""video"":""5dpFzb5eges"", ""alt"": """", ""picture"": ""are-makki"" },
  { ""level"":""groc"", ""negre"":""si"", ""tecnica"":""Montong an maki"", ""video"":""5fkuhw3ykeE"", ""alt"": """", ""picture"": ""are-makki"" },
